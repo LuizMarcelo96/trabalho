@@ -1,6 +1,12 @@
 import Link from 'next/link';
 
-export default function PokemonCard({ name, url, imageUrl }) {
+interface PokemonCardProps {
+  name: string;
+  url: string;
+  imageUrl: string;
+}
+
+export default function PokemonCard({ name, url, imageUrl }: PokemonCardProps) {
   const pokemonName = name.charAt(0).toUpperCase() + name.slice(1);
 
   return (
